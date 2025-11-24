@@ -1,0 +1,56 @@
+// pipeline {
+//     agent any
+//
+//     triggers {
+//         cron('0 8 * * *')  // Запуск каждый день в 8:00 утра
+//     }
+//
+//     environment {
+//         ENVIRONMENT = 'prod'
+//     }
+//
+//     stages {
+//
+//         stage('Run Tests - Firefox') {
+//             steps {
+//                 echo " Running tests on Firefox"
+//                 sh "mvn clean test -Denv=${ENVIRONMENT} -Dbrowser=firefox"
+//             }
+//         }
+//
+//         stage('Wait 5 minutes') {
+//             steps {
+//                 echo " Waiting 5 minutes before next run..."
+//                 sh "sleep 300"
+//             }
+//         }
+//
+//         stage('Run Tests - Edge') {
+//             steps {
+//                 echo "Running tests on Edge"
+//                 sh "mvn clean test -Denv=${ENVIRONMENT} -Dbrowser=edge"
+//             }
+//         }
+//
+//         stage('Wait 10 minutes') {
+//             steps {
+//                 echo " Waiting 10 minutes before Chrome run..."
+//                 sh "sleep 600"
+//             }
+//         }
+//
+//         stage('Run Tests - Chrome') {
+//             steps {
+//                 echo " Running tests on Chrome"
+//                 sh "mvn clean test -Denv=${ENVIRONMENT} -Dbrowser=chrome"
+//             }
+//         }
+//     }
+//
+//     post {
+//         always {
+//             echo " Generating Allure report"
+//             allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+//         }
+//     }
+// }

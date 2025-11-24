@@ -1,0 +1,33 @@
+#1. prod URL
+base.url=https://e-meria.kg/
+
+#2. staging URL
+#base.url=https://e.meria.kg/
+
+#3 transport-map page
+transport.map.url=https://e-meria.kg/transport-map
+
+#4 evakuator page
+evacuator.url=https://e-meria.kg/evacuator
+
+#5 license plate
+license.plate.no.tickets=01KG000XAM
+
+#6 Evacuator admin WebSite
+evacuator.admin.url=https://evacuator.meria.kg/login
+
+#7 Evacuator admin WebSite login
+evacuator.admin.login=ADMIN_LOGIN
+
+#8 Evacuator admin WebSite password
+evacuator.admin.password=ADMIN_PASSWORD
+
+#10 Evacuator admin WebSite url home page
+evacuator.admin.home.page.url=https://evacuator.meria.kg/superadmin/TowTruck
+
+#11 Real Estate Tax URL
+tax.calculation.categories.url=https://e-meria.kg/tax-calculation/category
+
+#11 Utilities page
+utilities.url=https://e-meria.kg/utilities
+

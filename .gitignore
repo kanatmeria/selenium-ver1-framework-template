@@ -1,0 +1,128 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Mac OS ###
+.DS_Store
+
+# Allure Report
+.allure/
+allure-results/
+allure-report/
+# Allure test results
+target/allure-results/
+
+
+# Ignore config files
+application.properties
+config.properties
+src/test/resources/configs/config.properties
+src/test/resources/configs/config.prod.properties
+src/test/resources/configs/config.stage.properties
+src/test/resources/configs/config.dev.properties
+src/test/resources/testdata/utilities_accounts.json
+src/test/resources/testdata/gazprom_accounts.json
+
+# Ignore logs
+logs
+*.log
+# IntelliJ IDEA
+.idea/
+out/
+
+# Maven
+pom.xml.tag
+
+# Gradle (if using Gradle instead of Maven)
+.gradle/
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# Selenium-specific (if any generated logs or temporary files)
+# Example: If your tests generate logs in a specific directory
+# logs/
+# test-output/
+
+# Operating System generated files
+Thumbs.db
+
+# Sensitive information (if applicable, e.g., API keys, passwords)
+ config.properties
+# credentials.json
+
+# Created by https://www.toptal.com/developers/gitignore/api/windows,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos
+
+### macOS ###
+# General
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.toptal.com/developers/gitignore/api/windows,macos
