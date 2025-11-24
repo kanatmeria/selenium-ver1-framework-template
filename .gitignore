@@ -66,7 +66,11 @@ Thumbs.db
 # credentials.json
 
 # Ignore sensitive files
+# Ignore only JSON files in testdata (keep .example files)
 src/test/resources/testdata/*.json
+
+# Keep everything else in testdata
+!src/test/resources/testdata/*.example
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos
