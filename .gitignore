@@ -65,6 +65,9 @@ Thumbs.db
  config.properties
 # credentials.json
 
+# Ignore sensitive files
+src/test/resources/testdata/*.json
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos
 
