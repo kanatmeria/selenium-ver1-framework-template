@@ -6,34 +6,40 @@ import io.qameta.allure.Feature;
 import kg.cdt.automation.framework.base.BaseTest;
 import kg.cdt.automation.framework.model.LoginData;
 import kg.cdt.automation.framework.pages.LoginPage;
+import kg.cdt.automation.framework.utils.ConfigReader;
 import kg.cdt.automation.framework.utils.TestDataReader;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @Epic("Authentication Tests")
 @Feature("Login")
 public class LoginPageTest extends BaseTest {
+    LoginData adminData = TestDataReader.getLoginData("admin");
+    LoginData userData  = TestDataReader.getLoginData("user");
+
+    private void performLoginAndCheck(LoginData data) {
+        LoginPage loginPage = new LoginPage(driver, wait);
+        loginPage.login(data);
+    }
 
     @Test
     @Description("Login with admin credentials from JSON")
     public void adminLoginTest() {
-        LoginData adminData = TestDataReader.getLoginData("admin");
+//        LoginPage loginPage = new LoginPage(driver, wait);
+//        loginPage.login(adminData);
+        performLoginAndCheck(adminData);
 
-        LoginPage loginPage = new LoginPage(driver, wait);
-        loginPage.login(adminData);
-
-        // Проверка успешного логина (например, появление элемента после входа)
-        // Здесь пример — проверяем наличие logout кнопки или другого элемента
-        // Assertions.assertTrue(homePage.isLogoutButtonVisible(), "Logout button should be visible");
     }
 
     @Test
     @Description("Login with user credentials from JSON")
     public void userLoginTest() {
-        LoginData userData = TestDataReader.getLoginData("user");
 
-        LoginPage loginPage = new LoginPage(driver, wait);
-        loginPage.login(userData);
-
-        // Проверка успешного входа
+//        LoginPage loginPage = new LoginPage(driver, wait);
+//        loginPage.login(userData);
+//        // Проверка успешного входа
+        performLoginAndCheck(userData);
     }
 }

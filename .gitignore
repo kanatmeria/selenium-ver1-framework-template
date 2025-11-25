@@ -68,6 +68,9 @@ Thumbs.db
 # Ignore sensitive files
 # Ignore only JSON files in testdata (keep .example files)
 src/test/resources/testdata/*.json
+src/test/resources/testdata/prod/*.json
+src/test/resources/testdata/stage/*.json
+
 
 # Keep everything else in testdata
 !src/test/resources/testdata/*.example
